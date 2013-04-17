@@ -1,8 +1,6 @@
 /*
- * grunt-init-commonjs
- * https://gruntjs.com/
- *
- * Copyright (c) 2012 "Cowboy" Ben Alman, contributors
+ * grunt-init-er
+ * https://github.com/acelan86/grunt-init-er
  * Licensed under the MIT license.
  */
 
@@ -46,7 +44,8 @@ exports.template = function(grunt, init, done) {
       'grunt-contrib-concat': '~0.1.2',
       'grunt-contrib-uglify': '~0.1.1',
       'grunt-contrib-watch': '~0.2.0',
-      'grunt-contrib-connect': '~0.3.0'
+      'grunt-contrib-connect': '~0.3.0',
+      'grunt-contrib-imagemin': '~0.1.4'
     };
 
     // Files to copy (and process).

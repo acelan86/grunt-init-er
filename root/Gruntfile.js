@@ -18,6 +18,16 @@ module.exports = function(grunt) {
         ]
       }
     },
+    imagemin: {                          // Task
+      dist: {                            // Target
+        options: {                       // Target options
+          optimizationLevel: 3
+        },
+        files: [
+          {expand: true, cwd: 'release/img/', dest: 'release/img/', src: ['**/*.png']}
+        ]
+      }
+    },
     concat: {
       options: {
         banner: '<%= banner %>',
@@ -92,7 +102,7 @@ module.exports = function(grunt) {
           "src/core/esui/Tip.js",
           "src/core/esui/TreeView.js",
 
-	  "src/business/<%= pkg.name %>.js",
+    "src/business/<%= pkg.name %>.js",
           "src/business/*.js",
           "src/business/**/*.js"
         ],
@@ -153,10 +163,13 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-connect');
 
   // Default task.
-  grunt.registerTask('default', ['copy', 'concat', 'uglify', 'connect', 'watch']);
+  grunt.registerTask('default', ['copy', 'imagemin', 'concat', 'connect', 'uglify', 'watch']);
+  grunt.registerTask('nouglify', ['copy', 'imagemin', 'concat', 'connect', 'watch']);
+  grunt.registerTask('nowatch', ['copy', 'imagemin', 'concat', 'connect', 'uglify']);
 
 };
