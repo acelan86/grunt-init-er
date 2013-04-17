@@ -1,11 +1,3 @@
-/*
- * grunt-init-commonjs
- * https://gruntjs.com/
- *
- * Copyright (c) 2012 "Cowboy" Ben Alman, contributors
- * Licensed under the MIT license.
- */
-
 'use strict';
 
 // Basic template description.
