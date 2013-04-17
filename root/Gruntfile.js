@@ -139,6 +139,13 @@ module.exports = function(grunt) {
         files: 'src/**/*',
         tasks: ['copy', 'concat']
       }
+    },
+    connect: {
+      server: {
+        options: {
+          port: 1234
+        }
+      }
     }
   });
 
@@ -147,8 +154,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-connect');
 
   // Default task.
-  grunt.registerTask('default', ['copy', 'concat', 'uglify', 'watch']);
+  grunt.registerTask('default', ['copy', 'concat', 'uglify', 'connect', 'watch']);
 
 };
