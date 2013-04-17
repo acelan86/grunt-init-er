@@ -11,8 +11,8 @@ grunt
 
 
 ```
-http://localhost/path/to/main.html#/sample
-http://localhost/path/to/main.release.html#/sample
+http://localhost:1234/main.html#/sample
+http://localhost:1234/main.release.html#/sample
 ```
 
 
