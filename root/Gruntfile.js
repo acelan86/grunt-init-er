@@ -14,7 +14,8 @@ module.exports = function(grunt) {
     copy: {
       cssimg : {
         files:[
-          {expand: true, cwd: 'src/core/esui/css/img/', dest: 'release/img/', src: ['**']}
+          {expand: true, cwd: 'src/core/esui/css/img/', dest: 'release/img/', src: ['**']},
+          {expand: true, cwd: 'src/css/img/', dest: 'release/img/', src: ['**']}
         ]
       }
     },
@@ -110,6 +111,8 @@ module.exports = function(grunt) {
       css: {
         dest : 'release/<%= pkg.name %>.css',
         src : [
+          "src/css/base.css",
+
           "src/core/esui/css/ui.css",
           "src/core/esui/css/ui-button.css",
           "src/core/esui/css/ui-cal.css",
@@ -128,6 +131,9 @@ module.exports = function(grunt) {
           "src/core/esui/css/ui-textline.css",
           "src/core/esui/css/ui-tip.css",
           "src/core/esui/css/ui-treeview.css",
+
+          "src/css/*.css",
+          "src/css/**/*.css"
         ]
       },
       tpl: {

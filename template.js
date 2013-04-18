@@ -55,7 +55,7 @@ exports.template = function(grunt, init, done) {
     init.addLicenseFiles(files, props.licenses);
 
     // Actually copy (and process) files.
-    init.copyAndProcess(files, props, {noProcess: 'src/core/esui/css/img/*'});
+    init.copyAndProcess(files, props, {noProcess: ['src/core/esui/css/img/*', 'src/css/img/**']});
 
     // Generate package.json file.
     init.writePackageJSON('package.json', props);

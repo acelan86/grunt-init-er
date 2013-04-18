@@ -1,3 +1,5 @@
+@import '../src/css/base.css';
+
 @import '../src/core/esui/css/ui.css';
 @import '../src/core/esui/css/ui-button.css';
 @import '../src/core/esui/css/ui-cal.css';

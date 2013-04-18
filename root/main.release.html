@@ -6,7 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="./release/{%= name %}.css"/>
 	</head>
 	<body>
-		<div id="main"></div>
+		<!--[if IE 6]>
+        <div id="IEOutWrap" class="ie6-out">
+            <div id="IEInWrap" class="ie6-in">
+        <![endif]-->
+        <div class="min-width-wrap">
+            <div id="main"></div>
+        </div>
+        <!--[if IE 6]>
+            </div>
+        </div>
+        <![endif]-->
 		<script src="./release/{%= name %}.js"></script>
 		<script>
 			window.onload = function () {
