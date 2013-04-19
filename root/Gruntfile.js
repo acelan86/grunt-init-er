@@ -22,7 +22,7 @@ module.exports = function(grunt) {
     sass: {
       dist : {
         files: [
-          {expand: true, cwd: 'src/css/', ext: '.css', dest: 'src/css/', src: ['**/*.sass']}
+          {expand: true, cwd: 'src/css/', ext: '.css', dest: 'src/css/', src: ['**/*.scss']}
         ]
       }
     },
