@@ -109,7 +109,7 @@ module.exports = function(grunt) {
           "src/core/esui/TextLine.js",
           "src/core/esui/Tip.js",
           "src/core/esui/TreeView.js",
-
+    "src/common/**/*.js",
     "src/business/<%= pkg.name %>.js",
           "src/business/*.js",
           "src/business/**/*.js"
