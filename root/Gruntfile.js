@@ -19,6 +19,13 @@ module.exports = function(grunt) {
         ]
       }
     },
+    sass: {
+      dist : {
+        files: [
+          {expand: true, cwd: 'src/css/', ext: '.css', dest: 'src/css/', src: ['**/*.sass']}
+        ]
+      }
+    },
     imagemin: {                          // Task
       dist: {                            // Target
         options: {                       // Target options
@@ -167,6 +174,7 @@ module.exports = function(grunt) {
 
   // These plugins provide necessary tasks.
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
@@ -174,8 +182,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-connect');
 
   // Default task.
-  grunt.registerTask('default', ['copy', 'imagemin', 'concat', 'connect', 'uglify', 'watch']);
-  grunt.registerTask('nouglify', ['copy', 'imagemin', 'concat', 'connect', 'watch']);
-  grunt.registerTask('nowatch', ['copy', 'imagemin', 'concat', 'connect', 'uglify']);
+  grunt.registerTask('default', ['copy', 'sass', 'imagemin', 'concat', 'connect', 'uglify', 'watch']);
+  grunt.registerTask('nouglify', ['copy', 'sass', 'imagemin', 'concat', 'connect', 'watch']);
+  grunt.registerTask('nowatch', ['copy', 'sass', 'imagemin', 'concat', 'connect', 'uglify']);
 
 };
