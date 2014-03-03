@@ -22,10 +22,10 @@
             }
         }),
         onafterrender : function () {
-            alert('sample index afterrender');
+            window.alert('sample index afterrender');
         },
         onentercomplete: function() {
-            alert('sample index entercomplete');
+            window.alert('sample index entercomplete');
         }
     });
 })(window, window.er, window.{%= name %});
