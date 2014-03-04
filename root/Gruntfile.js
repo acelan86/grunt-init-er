@@ -233,8 +233,8 @@ module.exports = function(grunt) {
       options: {
         banner: '/*!\n' + 
                 ' * sinaadToolkit\n' +
-                ' * @author acelan <xiaobin8[at]staff.sina.com.cn> zhouyi<zhouyi3[at]staff.sina.com.cn>\n' +
-                ' * @version 1.0.0\n' +
+                ' * @author acelan <xiaobin8[at]staff.sina.com.cn> yudong<yudong3[at]staff.sina.com.cn>\n' +
+                ' * @version <%= pkg.version %>\n' +
                 '<%= logo %>' + 
                 ' */\n',
       },
