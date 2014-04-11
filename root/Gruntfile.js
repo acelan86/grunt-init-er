@@ -26,7 +26,8 @@ module.exports = function(grunt) {
             ' *                 ###;\n' +                                 
             ' *                  ##o\n' +                                   
             ' *                 ;#!\n' +                                     
-            ' *                 ;\n',
+            ' *                 ;\n' + 
+            ' *\n',
     // Task configuration.
     copy: {
       cssimg : {
